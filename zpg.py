@@ -48,7 +48,7 @@ class ZPGBridge:
         return ""
 
     def sendCommand(self, cmd):
-        mapping = {"UP": "q", "DOWN": "w", "LEFT": "e", "RIGHT": "r", "SELECT": "t", "START": "y", "A": "u", "B": "i", "S_LEFT": "o", "S_RIGHT": "p", "TOGGLE_FF": "f"}
+        mapping = {"UP": "q", "DOWN": "w", "LEFT": "e", "RIGHT": "r", "SELECT": "t", "START": "y", "A": "u", "B": "i", "S_LEFT": "o", "S_RIGHT": "p", "TOGGLE_FF": "f", "SAVE": "m"}
         if cmd.upper() in mapping:
             subprocess.call(["xdotool", "key", "--window", self.wid, "--delay", "100", mapping[cmd.upper()]])
 
